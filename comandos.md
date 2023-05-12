@@ -66,6 +66,32 @@ e para conectar ao container que saiu sem matá-lo
 
 ``` docker container rm -f <containerID>```
 
+#### Ver informações de consumo do container (cpu, memoria, rede e blocos)
+
+``` docker container stats <containerID>```
+
+#### Mostra processos que estão sendo executados no container  
+
+``` docker container top <containerID>```
+
+#### Adcinionar maximo de memoria que o container pode consumir
+
+``` docker container run -d -m <memoria>M <nome do container sendo criado>```
+
+#### Adicinionar maximo de cpu (em core) que o container pode consumir
+
+``` docker container run -d --cpus <numero> <nome do container sendo criado>```
+``` docker container update --cpus <numero> <containerID>```
+
+#### Criar imagem com Dockerfile
+Dentro da pasta onde fica o dockerfile
+``` docker image build -t <nome da imagem>:<numero da versao> .```
+
+#### listar imagens que estão no host
+Dentro da pasta onde fica o dockerfile
+``` docker image ls```
+``` docker images```
+
 ### Teclado 
 
 #### sair do container sem matá-lo
@@ -77,6 +103,7 @@ crtl + p + q
 ### Rodar como deamon 
 
 Não rodar em primeiro plano, não tem interatividade apenas executa a aplicação.
+
 
 
 
