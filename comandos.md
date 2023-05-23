@@ -104,6 +104,16 @@ crtl + p + q
 
 Não rodar em primeiro plano, não tem interatividade apenas executa a aplicação.
 
+## Volumes
+
+- preserva os dados quando o container morre
+- volume é uma forma de colocar um file system dentro de um container
+
+### Volumes tipo bind
+
+Quando já possuo um diretório e quero colocá-lo dentro de um container
+
+``` docker container run -ti --mount type=bind,src=<path do diretorio existente>,dst=<destino de onde vc quer colocar o docker file> <imagem>```
 
 
 
